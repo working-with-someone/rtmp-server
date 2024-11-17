@@ -1,7 +1,10 @@
 version : "3.9"
 services:
   rtmp:
+    image: wws-rtmp-server
     build: ./rtmp
     ports:
       - "1935:1935"
-    container_name: rtmp_server
+    container_name: wws-rtmp-server
+    volumes:
+      - ./records:/records
