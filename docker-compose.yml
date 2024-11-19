@@ -5,6 +5,7 @@ services:
     build: ./rtmp
     ports:
       - "1935:1935"
+      - "8080:8080"
     container_name: wws-rtmp-server
     volumes:
       - ./records:/records
